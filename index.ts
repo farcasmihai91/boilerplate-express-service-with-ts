@@ -1,9 +1,9 @@
 import * as http from "http";
-import config from "./config/config";
+import config from "./config";
 
 
 // Init the express application
-const app = require("./config/express").default();
+const app = require("./express").default();
 
 const server: http.Server = http.createServer(app);
 

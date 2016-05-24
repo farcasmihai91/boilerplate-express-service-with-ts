@@ -10,6 +10,7 @@ Clone the repository
 ```
 npm install 
 typings install
+run TypeScript build task from VS Code (included), or create your own.
 node index.js
 ```
 

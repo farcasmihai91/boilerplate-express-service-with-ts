@@ -1,13 +1,12 @@
 import * as express from "express";
 import IndexEngine from "../engine/index.server.engine";
 
-export default class IndexRoute {
-	constructor(app : express.Express) {
-		IndexRoute.activate(app);
-	}
-	
-	public static activate (app : express.Express) : void {
-		app.route("/")
-			.get(IndexEngine.read);
-	}
-}
+
+let router: express.Router = express.Router();
+
+router.get('/', function (req: express.Request, res: express.Response) {
+	return res.send('Hello world!');
+
+});
+
+export = router;
