@@ -1,5 +1,5 @@
 import * as express from "express";
-import IndexController from "../controllers/index.server.controller";
+import IndexEngine from "../engine/index.server.engine";
 
 export default class IndexRoute {
 	constructor(app : express.Express) {
@@ -8,6 +8,6 @@ export default class IndexRoute {
 	
 	public static activate (app : express.Express) : void {
 		app.route("/")
-			.get(IndexController.read);
+			.get(IndexEngine.read);
 	}
 }

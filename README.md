@@ -1,7 +1,7 @@
 Typescript and Express.js 
 =========================
 
-An Express.js project implemented using Typescript with strongly typed objects:
+A boilerplate Express.js project implemented using TypeScript:
 
 # Installation
 
@@ -15,7 +15,7 @@ node index.js
 
 Browse to http://localhost:3000
 
-Wow, it works!
+
 
 # Start in watch mode
 
@@ -24,18 +24,11 @@ Wow, it works!
 # Folder structure
 
     .
-    ├── src                    # Main project files
-    │   ├── index.ts           # Required from ../index.js with ts-node
-    │   ├── public             # Assets folder
-    │   ├── controllers        # Controller files
-    │   ├── views              # Jade files
-    │   ├── routes             # Routes folder
-	│   ├── config             # Configuration folder
-	│   ├───├── express.ts     # Express configuration
-	│   ├───├── config.ts      # Application configuration in config.js (port etc)
-	index.js                   # Requires ./src with ts-node module
+    ├── manager                # routes, access points, highly volatile logic.
+    ├── engine                 # application logic, actual implementation of the routes.
+    ├── resource-access        # manages connection to DB and exposes models.
+	index.js                   # main app - configuration only.
 
 # License
 
 MIT - Do with as you like.
-
